@@ -265,3 +265,11 @@ Obter Ordem de Pagamento
 
 #### ERRORS
     - 404: Caso nem uma ordem de pagamento seja encontrada.
+
+## Docker 
+Para executar o projeto em um container ja foi disponibilizado um Dockerfile para isso.
+Para executar basta executar os seguintes comandos:
+```bash
+docker build -t [image-name] . ## Build da imagem
+docker run --name [container-name] -p [port]:4531 [image-name]
+```

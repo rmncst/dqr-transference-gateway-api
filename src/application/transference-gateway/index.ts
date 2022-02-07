@@ -4,7 +4,7 @@ import entities from './infra/entity';
 import controllers from './infra/controller';
 import repositories from './infra/repository';
 import useCases from './domain/use-case';
-import { HttpPaymentProxyService } from './infra/infra/http.payment-proxy.service';
+import { HttpPaymentProxyService } from './infra/service/http.payment-proxy.service';
 
 const urlPaymentProxyFactory = {
   provide: 'PAYMENT_PROXY_URL',
