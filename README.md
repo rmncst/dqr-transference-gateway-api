@@ -7,12 +7,12 @@ Partindo do escopo acima, fora desenvolvido tanto o serviço chamado pelo client
 
 Para um client consumir o serviço, ele terá de informar 2 contas para a transferência. Essas contas devem estar previamente cadastradas também na api, sendo assim, tais rotas foram disponibilizadas para esse fim.
 
-Assim que um cliente cadastra uma transferência, é enviado uma requisição para o serviço de liquidação. Caso o serviço esteja indisponível ou ocorra algum erro inesperado, a transferência será assinada com true em um campo chamada <paymentOrderError>. Caso o serviço esteja funcionando plenamente, um registro chamado payment order será criado e retornado. Serão possíveis 3 status nessa chamada:
+Assim que um cliente cadastra uma transferência, é enviado uma requisição para o serviço de liquidação. Caso o serviço esteja indisponível ou ocorra algum erro inesperado, a transferência será assinada com true em um campo chamado `paymentOrderError`. Caso o serviço esteja funcionando plenamente, um registro chamado payment order será criado e retornado. Serão possíveis 3 status nessa chamada:
 - CREATED – Significa que o registro de liquidação foi criado com sucesso, e que em alguns milissegundos ele será atualizado para APPROVED
 - REJECTED – Segnifica que o usuário informou uma data de operação expirada, ou seja, que já venceu. Sendo assim, nada ocorrerá com esse registro, além de manter o histórico.
 - SCHEDULED – Caso o usuário informe uma data acima de 24h, o mock irá criar um registro com status SCHEDULED e retornar para a api de transferências.
      
-Logo após o registro do com status do tipo CREATED ser registrado, o mock irá atualizá-lo para APPROVED, para que nas buscas posteriores, o mesmo seja disponibilizado assim.
+Logo após o registro com status do tipo CREATED ser registrado, o mock irá atualizá-lo para APPROVED, para que nas buscas posteriores, o mesmo seja disponibilizado assim.
 
 ## Tecnologias Usadas
 Para desenvolver este teste, fora usado nodejs juntamente com a plataforma [nestjs](https://nestjs.com/). Como solução de banco de dados, fora utilizado um sqlite que ficará armazenada dentro de {raiz}/db/db.sqlte.
