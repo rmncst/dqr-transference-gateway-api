@@ -54,6 +54,14 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+### Passo adicional
+
+Caso ocorra algum problema no driver de conexão do sqlite, favor executar o seguinte comando
+```bash
+npm install sqlite sqlite3 --save
+````
+Em alguns sistemas operacionas, esse passo é necessário.
+
 ## API METHODS
 
 ### POST /api/account
