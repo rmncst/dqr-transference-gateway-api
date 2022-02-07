@@ -14,9 +14,9 @@ import { TypeTransferenceRepository } from '../../../infra/repository/type.trans
 import { TransferenceRepository } from '../../repository/transference.repository';
 import { AccountFromNotFoundException } from '../../exception/account-from-not-found.exception';
 import { AccountToNotFoundException } from '../../exception/account-to-not-found.exception';
-import { HttpPaymentProxyService } from '../../../infra/service/http.payment-proxy.service';
 import { PaymentProxyServiceInterface } from '../../service/payment-proxy.service.interface';
 import { MakeTransferenceUseCaseResponse } from './make-transference.use-case.response';
+import { HttpPaymentProxyService } from '../../../infra/service/http.payment-proxy.service';
 
 @Injectable()
 export class MakeTransferenceUseCase

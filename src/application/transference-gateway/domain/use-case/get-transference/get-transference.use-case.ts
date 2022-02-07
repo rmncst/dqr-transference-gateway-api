@@ -11,9 +11,9 @@ import {
 } from '../../../../../core/base/field-error.validation';
 import { ValidationException } from '../../../../../core/exception/validation.exception';
 import { TransferenceNotFoundException } from '../../exception/transference-not-found.exception';
-import { HttpPaymentProxyService } from '../../../infra/service/http.payment-proxy.service';
 import { PaymentProxyServiceInterface } from '../../service/payment-proxy.service.interface';
 import { GetTransferenceUseCaseResponse } from './get-transference.use-case.response';
+import { HttpPaymentProxyService } from '../../../infra/service/http.payment-proxy.service';
 
 @Injectable()
 export class GetTransferenceUseCase
